@@ -7,7 +7,6 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config for plugins
   config.omnibus.chef_version = :latest
-  config.berkshelf.enabled = true
 
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
@@ -88,7 +87,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # some recipes and/or roles.
   #
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = "./cookbooks"
+    chef.cookbooks_path = ["./cookbooks", "./site-cookbooks"]
     chef.roles_path = "./roles"
     chef.data_bags_path = "./data_bags"
    chef.run_list = [
