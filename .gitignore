@@ -1,6 +1,6 @@
 cookbooks/
 .vagrant/
-trema/
+trema/*
 
 ## generic files to ignore
 *~

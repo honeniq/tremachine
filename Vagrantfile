@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network :forwarded_port, guest: 6633, host: 6633
 
-  config.vm.synced_folder "./trema", "/home/vagrant/trema"
+  config.vm.synced_folder "./" , "/home/vagrant/trema"
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["./cookbooks", "./site-cookbooks"]
