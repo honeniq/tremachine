@@ -1,12 +1,3 @@
-#
-# Cookbook Name:: trema
-# Recipe:: default
-#
-# Copyright 2014, YOUR_COMPANY_NAME
-#
-# All rights reserved - Do Not Redistribute
-#
-
 # Trema本の頃と比べて、gitと　libglib2.0-devも追加で必要になった。
 %w{gcc make git ruby rubygems-integration ruby-dev irb libpcap-dev libsqlite3-dev libglib2.0-dev }.each do |pkg|
   package pkg do
@@ -14,6 +5,7 @@
   end
 end
 
+# Tremaがruby-gemsの1.8.25に依存しているため
 gem_package "rubygems-update" do
   action :install 
   version "1.8.25"
