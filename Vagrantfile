@@ -23,4 +23,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "apt"
     chef.add_recipe "trema"
   end
+
+  config.vm.provision :serverspec do |spec|
+    spec.pattern = 'spec/default/*_spec.rb'
+  end
 end
