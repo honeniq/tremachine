@@ -12,6 +12,7 @@ VagrantでとりあえずTremaが使えるところまで持っていきます�
 * VirtualBox 4.3.18
 
 * vagrant-omnibus 1.4.1
+* vagrant-serverspec 0.1.0
 
 ## 使い方
 
